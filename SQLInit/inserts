@@ -1,0 +1,365 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.4
+-- Dumped by pg_dump version 13.4
+
+-- Started on 2021-10-04 05:51:05
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 3160 (class 0 OID 24637)
+-- Dependencies: 211
+-- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.auth_user VALUES (2, '123456', NULL, false, 'test', '', '', 'omoncayo@apptelink.com', false, true, '2021-10-02 22:35:42.290647-05');
+INSERT INTO public.auth_user VALUES (3, 'pbkdf2_sha256$260000$e5wlnlOAKXujM6APTUsNT2$Bweqa+lGFX5kkcm78H22R6Bq9M8+pWYvuWv5CcMpd/w=', NULL, false, 'test2', '', '', 'omoncayo2@apptelink.com', false, true, '2021-10-02 23:05:35.181082-05');
+INSERT INTO public.auth_user VALUES (1, 'pbkdf2_sha256$260000$1jYrHU2EkE8ZVsR1VcJJut$+tS4zlCGR8bB2qwT1BH8ZeoiHnnU5YZd4Z0zSkxUedk=', '2021-10-02 13:58:41.871679-05', true, 'OscarHMG', 'Oscar
+', 'Moncayo', 'omoncayo@apptelink.com', true, true, '2021-10-02 12:10:09.14171-05');
+INSERT INTO public.auth_user VALUES (4, 'pbkdf2_sha256$260000$XwGblBxvGGaUxztooAg1Vi$XnO5yp92QdGys7ISxJHF6X6KpbB+L6Gld5jSisuXBN8=', NULL, false, 'OscarHernaMoncayoGarcia', 'SADASD', '1231231231', 'omoncayo2@apptelink.com', false, true, '2021-10-04 02:48:04.119672-05');
+INSERT INTO public.auth_user VALUES (5, 'pbkdf2_sha256$260000$hYnuiiptX8IWzcBpb7e0By$jRWDjb6iaRMo/yd7WlfLXozvEz7yZ4l8ZUbPsFfwyCQ=', NULL, false, 'LOL', '1231', 'ASDASD', 'omoncayo@rayzem.com', false, true, '2021-10-04 02:52:10.883969-05');
+INSERT INTO public.auth_user VALUES (6, 'pbkdf2_sha256$260000$iaQYRWaxx0XwZHujEXzkg4$sKxJmh4jSLEAf17XQ+3/rdvmGzsOn7KM0x9m4WXKDcE=', NULL, false, 'LOL2', 'ASDASD', 'asdadasd', 'omoncayo12@rayzem.com', false, true, '2021-10-04 02:53:15.184887-05');
+INSERT INTO public.auth_user VALUES (7, 'pbkdf2_sha256$260000$YQxAUoQmaR3SXzCIboD6TJ$H6EcYcm7kjb1lrUcIXxRn3U2NRB8M5jN1O64X0Jo5hc=', NULL, false, 'OscarHernaMoncayoGarcia1213', 'SADASD111123123', '1231231231', 'omoncayo21111123123@apptelink.com', false, true, '2021-10-04 03:09:25.083991-05');
+INSERT INTO public.auth_user VALUES (8, 'Asdf12312@#_a123', NULL, false, 'OscarHernaMoncayoGarcia123123123', 'SADASD', '1231231231', 'omoncayo2@apptelink.com', false, true, '2021-10-04 03:44:49.400014-05');
+INSERT INTO public.auth_user VALUES (9, 'Asdf12312@#_a123', NULL, false, 'OscarHernaMoncayoGarcia123123123qweqweqweqwe', 'SADASD', '1231231231', 'omoncayo2@apptelink.com', false, true, '2021-10-04 03:45:09.632842-05');
+INSERT INTO public.auth_user VALUES (10, 'Asdfg12345', NULL, false, 'QQQQ', 'ASDASDADASD', 'WQEQWEQWEQW', 'AASDASD@COREO.COM', false, true, '2021-10-04 03:46:40.410253-05');
+
+
+--
+-- TOC entry 3168 (class 0 OID 24739)
+-- Dependencies: 219
+-- Data for Name: api_post; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.api_post VALUES (1, '2021-10-02 12:10:51.713932-05', NULL, NULL, true, 'POST1', 1);
+INSERT INTO public.api_post VALUES (2, '2021-10-04 05:27:34.706402-05', NULL, NULL, true, '123123123123123123', 1);
+INSERT INTO public.api_post VALUES (3, '2021-10-04 05:29:18.038795-05', NULL, NULL, true, 'asdasdasdasda', 1);
+INSERT INTO public.api_post VALUES (4, '2021-10-04 05:30:36.678077-05', NULL, NULL, true, 'asdaadsasdsa', 1);
+
+
+--
+-- TOC entry 3172 (class 0 OID 24755)
+-- Dependencies: 223
+-- Data for Name: api_comments; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.api_comments VALUES (1, '2021-10-03 19:09:00.137149-05', NULL, NULL, true, 'Esto es un comentario', 1, 1);
+INSERT INTO public.api_comments VALUES (2, '2021-10-03 19:12:05.96686-05', NULL, NULL, true, 'Esto es un comentario 2', 1, 1);
+INSERT INTO public.api_comments VALUES (3, '2021-10-03 19:12:16.433782-05', NULL, NULL, true, 'Esto es un comentario3', 1, 2);
+INSERT INTO public.api_comments VALUES (4, '2021-10-03 19:40:08.69216-05', NULL, NULL, true, 'XXXXXXXXXX', 1, 3);
+INSERT INTO public.api_comments VALUES (5, '2021-10-03 19:40:16.655886-05', NULL, NULL, true, 'RRRR', 1, 3);
+INSERT INTO public.api_comments VALUES (6, '2021-10-03 21:43:53.966285-05', NULL, NULL, true, 'asdasdasdasdasd', 1, 1);
+INSERT INTO public.api_comments VALUES (7, '2021-10-03 21:47:34.156451-05', NULL, NULL, true, 'asdadasd', 1, 1);
+INSERT INTO public.api_comments VALUES (8, '2021-10-03 21:50:21.374264-05', NULL, NULL, true, 'ASDASDASDASDASDASDASDASDASDASDqwqwe', 1, 1);
+INSERT INTO public.api_comments VALUES (9, '2021-10-03 23:37:30.387882-05', NULL, NULL, true, 'asdasdasd', 1, 1);
+INSERT INTO public.api_comments VALUES (10, '2021-10-03 23:40:00.172076-05', NULL, NULL, true, 'asdasdasd', 1, 1);
+INSERT INTO public.api_comments VALUES (11, '2021-10-04 05:22:10.449766-05', NULL, NULL, true, 'asdasdasdasdasdasd', 1, 1);
+
+
+--
+-- TOC entry 3170 (class 0 OID 24747)
+-- Dependencies: 221
+-- Data for Name: api_reactions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.api_reactions VALUES (1, '2021-10-03 23:41:36.672305-05', '2021-10-03 18:41:36.672305-05', NULL, true, 'wow', 1, 1);
+INSERT INTO public.api_reactions VALUES (2, '2021-10-04 05:37:04.942414-05', NULL, NULL, true, 'wow', 3, 1);
+
+
+--
+-- TOC entry 3156 (class 0 OID 24619)
+-- Dependencies: 207
+-- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3152 (class 0 OID 24601)
+-- Dependencies: 203
+-- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.django_content_type VALUES (1, 'admin', 'logentry');
+INSERT INTO public.django_content_type VALUES (2, 'auth', 'permission');
+INSERT INTO public.django_content_type VALUES (3, 'auth', 'group');
+INSERT INTO public.django_content_type VALUES (4, 'auth', 'user');
+INSERT INTO public.django_content_type VALUES (5, 'contenttypes', 'contenttype');
+INSERT INTO public.django_content_type VALUES (6, 'sessions', 'session');
+INSERT INTO public.django_content_type VALUES (7, 'api', 'post');
+INSERT INTO public.django_content_type VALUES (8, 'api', 'reactions');
+INSERT INTO public.django_content_type VALUES (9, 'api', 'comments');
+INSERT INTO public.django_content_type VALUES (10, 'authtoken', 'token');
+INSERT INTO public.django_content_type VALUES (11, 'authtoken', 'tokenproxy');
+
+
+--
+-- TOC entry 3154 (class 0 OID 24611)
+-- Dependencies: 205
+-- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.auth_permission VALUES (1, 'Can add log entry', 1, 'add_logentry');
+INSERT INTO public.auth_permission VALUES (2, 'Can change log entry', 1, 'change_logentry');
+INSERT INTO public.auth_permission VALUES (3, 'Can delete log entry', 1, 'delete_logentry');
+INSERT INTO public.auth_permission VALUES (4, 'Can view log entry', 1, 'view_logentry');
+INSERT INTO public.auth_permission VALUES (5, 'Can add permission', 2, 'add_permission');
+INSERT INTO public.auth_permission VALUES (6, 'Can change permission', 2, 'change_permission');
+INSERT INTO public.auth_permission VALUES (7, 'Can delete permission', 2, 'delete_permission');
+INSERT INTO public.auth_permission VALUES (8, 'Can view permission', 2, 'view_permission');
+INSERT INTO public.auth_permission VALUES (9, 'Can add group', 3, 'add_group');
+INSERT INTO public.auth_permission VALUES (10, 'Can change group', 3, 'change_group');
+INSERT INTO public.auth_permission VALUES (11, 'Can delete group', 3, 'delete_group');
+INSERT INTO public.auth_permission VALUES (12, 'Can view group', 3, 'view_group');
+INSERT INTO public.auth_permission VALUES (13, 'Can add user', 4, 'add_user');
+INSERT INTO public.auth_permission VALUES (14, 'Can change user', 4, 'change_user');
+INSERT INTO public.auth_permission VALUES (15, 'Can delete user', 4, 'delete_user');
+INSERT INTO public.auth_permission VALUES (16, 'Can view user', 4, 'view_user');
+INSERT INTO public.auth_permission VALUES (17, 'Can add content type', 5, 'add_contenttype');
+INSERT INTO public.auth_permission VALUES (18, 'Can change content type', 5, 'change_contenttype');
+INSERT INTO public.auth_permission VALUES (19, 'Can delete content type', 5, 'delete_contenttype');
+INSERT INTO public.auth_permission VALUES (20, 'Can view content type', 5, 'view_contenttype');
+INSERT INTO public.auth_permission VALUES (21, 'Can add session', 6, 'add_session');
+INSERT INTO public.auth_permission VALUES (22, 'Can change session', 6, 'change_session');
+INSERT INTO public.auth_permission VALUES (23, 'Can delete session', 6, 'delete_session');
+INSERT INTO public.auth_permission VALUES (24, 'Can view session', 6, 'view_session');
+INSERT INTO public.auth_permission VALUES (25, 'Can add post', 7, 'add_post');
+INSERT INTO public.auth_permission VALUES (26, 'Can change post', 7, 'change_post');
+INSERT INTO public.auth_permission VALUES (27, 'Can delete post', 7, 'delete_post');
+INSERT INTO public.auth_permission VALUES (28, 'Can view post', 7, 'view_post');
+INSERT INTO public.auth_permission VALUES (29, 'Can add reactions', 8, 'add_reactions');
+INSERT INTO public.auth_permission VALUES (30, 'Can change reactions', 8, 'change_reactions');
+INSERT INTO public.auth_permission VALUES (31, 'Can delete reactions', 8, 'delete_reactions');
+INSERT INTO public.auth_permission VALUES (32, 'Can view reactions', 8, 'view_reactions');
+INSERT INTO public.auth_permission VALUES (33, 'Can add comments', 9, 'add_comments');
+INSERT INTO public.auth_permission VALUES (34, 'Can change comments', 9, 'change_comments');
+INSERT INTO public.auth_permission VALUES (35, 'Can delete comments', 9, 'delete_comments');
+INSERT INTO public.auth_permission VALUES (36, 'Can view comments', 9, 'view_comments');
+INSERT INTO public.auth_permission VALUES (37, 'Can add Token', 10, 'add_token');
+INSERT INTO public.auth_permission VALUES (38, 'Can change Token', 10, 'change_token');
+INSERT INTO public.auth_permission VALUES (39, 'Can delete Token', 10, 'delete_token');
+INSERT INTO public.auth_permission VALUES (40, 'Can view Token', 10, 'view_token');
+INSERT INTO public.auth_permission VALUES (41, 'Can add token', 11, 'add_tokenproxy');
+INSERT INTO public.auth_permission VALUES (42, 'Can change token', 11, 'change_tokenproxy');
+INSERT INTO public.auth_permission VALUES (43, 'Can delete token', 11, 'delete_tokenproxy');
+INSERT INTO public.auth_permission VALUES (44, 'Can view token', 11, 'view_tokenproxy');
+
+
+--
+-- TOC entry 3158 (class 0 OID 24629)
+-- Dependencies: 209
+-- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3162 (class 0 OID 24647)
+-- Dependencies: 213
+-- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3164 (class 0 OID 24655)
+-- Dependencies: 215
+-- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3174 (class 0 OID 24811)
+-- Dependencies: 225
+-- Data for Name: authtoken_token; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.authtoken_token VALUES ('904c79af786dfb035b9645e475f5772711536102', '2021-10-02 13:59:12.111099-05', 1);
+INSERT INTO public.authtoken_token VALUES ('f419e095972ce9c1f59f3e23b34425ce57c39f4d', '2021-10-02 23:05:35.363084-05', 3);
+INSERT INTO public.authtoken_token VALUES ('b591c54dcd73154b228fa8098b5663b9b82d3505', '2021-10-04 02:53:27.883914-05', 5);
+
+
+--
+-- TOC entry 3166 (class 0 OID 24715)
+-- Dependencies: 217
+-- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.django_admin_log VALUES (1, '2021-10-02 12:10:51.714896-05', '1', 'Post object (1)', 1, '[{"added": {}}]', 7, 1);
+INSERT INTO public.django_admin_log VALUES (2, '2021-10-02 13:30:24.999559-05', '1', 'c1ff32bf017d1c30af20881827af42fe82b8133d', 1, '[{"added": {}}]', 11, 1);
+INSERT INTO public.django_admin_log VALUES (3, '2021-10-02 13:59:07.085439-05', '1', 'c1ff32bf017d1c30af20881827af42fe82b8133d', 3, '', 11, 1);
+INSERT INTO public.django_admin_log VALUES (4, '2021-10-02 13:59:12.112115-05', '1', '904c79af786dfb035b9645e475f5772711536102', 1, '[{"added": {}}]', 11, 1);
+INSERT INTO public.django_admin_log VALUES (5, '2021-10-03 19:09:00.148579-05', '1', 'Comments object (1)', 1, '[{"added": {}}]', 9, 1);
+INSERT INTO public.django_admin_log VALUES (6, '2021-10-03 19:12:05.967861-05', '2', 'Comments object (2)', 1, '[{"added": {}}]', 9, 1);
+INSERT INTO public.django_admin_log VALUES (7, '2021-10-03 19:12:16.435782-05', '3', 'Comments object (3)', 1, '[{"added": {}}]', 9, 1);
+INSERT INTO public.django_admin_log VALUES (8, '2021-10-03 19:40:08.698161-05', '4', 'Comments object (4)', 1, '[{"added": {}}]', 9, 1);
+INSERT INTO public.django_admin_log VALUES (9, '2021-10-03 19:40:16.656883-05', '5', 'Comments object (5)', 1, '[{"added": {}}]', 9, 1);
+
+
+--
+-- TOC entry 3150 (class 0 OID 24590)
+-- Dependencies: 201
+-- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.django_migrations VALUES (1, 'contenttypes', '0001_initial', '2021-10-02 10:26:05.757228-05');
+INSERT INTO public.django_migrations VALUES (2, 'auth', '0001_initial', '2021-10-02 10:26:05.879806-05');
+INSERT INTO public.django_migrations VALUES (3, 'admin', '0001_initial', '2021-10-02 10:26:05.911311-05');
+INSERT INTO public.django_migrations VALUES (4, 'admin', '0002_logentry_remove_auto_add', '2021-10-02 10:26:05.918311-05');
+INSERT INTO public.django_migrations VALUES (5, 'admin', '0003_logentry_add_action_flag_choices', '2021-10-02 10:26:05.925311-05');
+INSERT INTO public.django_migrations VALUES (6, 'api', '0001_initial', '2021-10-02 10:26:05.992924-05');
+INSERT INTO public.django_migrations VALUES (7, 'contenttypes', '0002_remove_content_type_name', '2021-10-02 10:26:06.015922-05');
+INSERT INTO public.django_migrations VALUES (8, 'auth', '0002_alter_permission_name_max_length', '2021-10-02 10:26:06.024923-05');
+INSERT INTO public.django_migrations VALUES (9, 'auth', '0003_alter_user_email_max_length', '2021-10-02 10:26:06.032921-05');
+INSERT INTO public.django_migrations VALUES (10, 'auth', '0004_alter_user_username_opts', '2021-10-02 10:26:06.042923-05');
+INSERT INTO public.django_migrations VALUES (11, 'auth', '0005_alter_user_last_login_null', '2021-10-02 10:26:06.050922-05');
+INSERT INTO public.django_migrations VALUES (12, 'auth', '0006_require_contenttypes_0002', '2021-10-02 10:26:06.052921-05');
+INSERT INTO public.django_migrations VALUES (13, 'auth', '0007_alter_validators_add_error_messages', '2021-10-02 10:26:06.060923-05');
+INSERT INTO public.django_migrations VALUES (14, 'auth', '0008_alter_user_username_max_length', '2021-10-02 10:26:06.082922-05');
+INSERT INTO public.django_migrations VALUES (15, 'auth', '0009_alter_user_last_name_max_length', '2021-10-02 10:26:06.090921-05');
+INSERT INTO public.django_migrations VALUES (16, 'auth', '0010_alter_group_name_max_length', '2021-10-02 10:26:06.101924-05');
+INSERT INTO public.django_migrations VALUES (17, 'auth', '0011_update_proxy_permissions', '2021-10-02 10:26:06.111923-05');
+INSERT INTO public.django_migrations VALUES (18, 'auth', '0012_alter_user_first_name_max_length', '2021-10-02 10:26:06.119921-05');
+INSERT INTO public.django_migrations VALUES (19, 'sessions', '0001_initial', '2021-10-02 10:26:06.139923-05');
+INSERT INTO public.django_migrations VALUES (20, 'authtoken', '0001_initial', '2021-10-02 13:26:58.917917-05');
+INSERT INTO public.django_migrations VALUES (21, 'authtoken', '0002_auto_20160226_1747', '2021-10-02 13:26:58.949908-05');
+INSERT INTO public.django_migrations VALUES (22, 'authtoken', '0003_tokenproxy', '2021-10-02 13:26:58.952916-05');
+
+
+--
+-- TOC entry 3173 (class 0 OID 24800)
+-- Dependencies: 224
+-- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.django_session VALUES ('drtrfm8mjulbrpu5m5na7a260rka80c3', '.eJxVjEEOwiAQRe_C2pAyQAGX7j0DmWFAqoYmpV0Z765NutDtf-_9l4i4rTVuPS9xYnEWSpx-N8L0yG0HfMd2m2Wa27pMJHdFHrTL68z5eTncv4OKvX5r4OIw6OSNxpSJkSwy6GI8KFbBuBESeRgoF9KmWD2kAI7taGwJmax4fwACOzhh:1mWiWy:4tFslrPwYn3tJy-_KvOkD-wV1o1w0r2CF3kO8OT-Vx0', '2021-10-16 12:10:36.581688-05');
+INSERT INTO public.django_session VALUES ('8tchl7u4yxmw9bnhcncc21issjmft2d9', '.eJxVjEEOwiAQRe_C2pAyQAGX7j0DmWFAqoYmpV0Z765NutDtf-_9l4i4rTVuPS9xYnEWSpx-N8L0yG0HfMd2m2Wa27pMJHdFHrTL68z5eTncv4OKvX5r4OIw6OSNxpSJkSwy6GI8KFbBuBESeRgoF9KmWD2kAI7taGwJmax4fwACOzhh:1mWkDZ:59zxqcRw3HroM28lNc7xhgfJyOOmu2IsEY0ftajNluk', '2021-10-16 13:58:41.878679-05');
+
+
+--
+-- TOC entry 3180 (class 0 OID 0)
+-- Dependencies: 222
+-- Name: api_comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.api_comments_id_seq', 11, true);
+
+
+--
+-- TOC entry 3181 (class 0 OID 0)
+-- Dependencies: 218
+-- Name: api_post_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.api_post_id_seq', 4, true);
+
+
+--
+-- TOC entry 3182 (class 0 OID 0)
+-- Dependencies: 220
+-- Name: api_reactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.api_reactions_id_seq', 2, true);
+
+
+--
+-- TOC entry 3183 (class 0 OID 0)
+-- Dependencies: 206
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_group_id_seq', 1, false);
+
+
+--
+-- TOC entry 3184 (class 0 OID 0)
+-- Dependencies: 208
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
+
+
+--
+-- TOC entry 3185 (class 0 OID 0)
+-- Dependencies: 204
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_permission_id_seq', 44, true);
+
+
+--
+-- TOC entry 3186 (class 0 OID 0)
+-- Dependencies: 212
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
+
+
+--
+-- TOC entry 3187 (class 0 OID 0)
+-- Dependencies: 210
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_user_id_seq', 10, true);
+
+
+--
+-- TOC entry 3188 (class 0 OID 0)
+-- Dependencies: 214
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- TOC entry 3189 (class 0 OID 0)
+-- Dependencies: 216
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.django_admin_log_id_seq', 9, true);
+
+
+--
+-- TOC entry 3190 (class 0 OID 0)
+-- Dependencies: 202
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.django_content_type_id_seq', 11, true);
+
+
+--
+-- TOC entry 3191 (class 0 OID 0)
+-- Dependencies: 200
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 22, true);
+
+
+-- Completed on 2021-10-04 05:51:05
+
+--
+-- PostgreSQL database dump complete
+--
+
