@@ -1,0 +1,19 @@
+<div class="wrapper-profile">
+    <mat-spinner class="spinner-loader" *ngIf="loadingProfile" [diameter]="40"></mat-spinner>
+    <div class="uxg-menu-header" *ngIf="!loadingProfile">
+        <div class="uxg-avatar-hero-block">
+            <img mat-card-sm-image src="assets/avatar.png">
+            <h3 class="uxg-h6">{{profile.first_name}} {{profile.last_name}}</h3>
+            <span class="uxg-caption">{{profile.email}}</span>
+        </div>
+    </div>
+
+    <h3 class="title"><strong>MIS PUBLICACIONES</strong></h3>
+    <mat-spinner class="spinner-loader" *ngIf="loadingPosts" [diameter]="40"></mat-spinner>
+    <div *ngIf="!loadingPosts">
+        <div *ngFor="let item of posts" class="wrapper-post">
+            <app-post-component [id]="item.id" [postText]="item.description" [postDate]="item.register_date" [postUserName]="item.user" [numberComments]="item.number_comments" [numberReactions]="item.number_reactions"> </app-post-component>
+        </div>
+    </div>
+
+</div>

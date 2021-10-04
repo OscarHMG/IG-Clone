@@ -1,0 +1,21 @@
+<div class="modal-comments">
+    <h1 mat-dialog-title>Comentarios</h1>
+    <mat-spinner class="spinner-loader" *ngIf="loading" [diameter]="40"></mat-spinner>
+    <div *ngIf="!loading" class="modal-body">
+        <div *ngFor="let item of comments">
+            <mat-card class="card-comment">
+                <mat-card-title>{{item.user}}</mat-card-title>
+                <mat-card-subtitle>{{item.register_date}}</mat-card-subtitle>
+                <mat-card-content>
+                    <p>{{item.comment_text}}</p>
+
+                </mat-card-content>
+
+            </mat-card>
+
+        </div>
+    </div>
+    <div mat-dialog-actions class="wrapper-close-button">
+        <button mat-button color="primary" (click)="cancelar()">Cerrar</button>
+    </div>
+</div>

@@ -1,0 +1,3 @@
+<div *ngFor="let item of posts" class="wrapper-post">
+    <app-post-component [id]="item.id" [postText]="item.description" [postDate]="item.register_date" [postUserName]="item.user" [numberComments]="item.number_comments" [numberReactions]="item.number_reactions"> </app-post-component>
+</div>

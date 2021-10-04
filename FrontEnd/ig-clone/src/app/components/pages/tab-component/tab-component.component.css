@@ -1,0 +1,7 @@
+#tab-group {
+    height: 100%;
+}
+
+#tab-group mat-tab-body {
+    flex-grow: 1;
+}

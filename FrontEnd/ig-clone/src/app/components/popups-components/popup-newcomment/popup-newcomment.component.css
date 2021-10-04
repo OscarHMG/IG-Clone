@@ -1,0 +1,8 @@
+.full-width {
+    display: inline-grid;
+    width: 500px;
+}
+
+.button-submitcomment {
+    margin-top: 50px;
+}

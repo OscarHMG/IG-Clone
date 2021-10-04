@@ -1,0 +1,26 @@
+.example-card {
+    min-width: 500px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.comments,
+.reacciones {
+    cursor: pointer;
+    color: blueviolet;
+    margin-left: 15px;
+}
+
+.wrapper-actions {
+    display: flex;
+    margin-top: 8px;
+}
+
+.create-comment {
+    margin-right: 15px;
+    color: blueviolet;
+    cursor: pointer;
+}

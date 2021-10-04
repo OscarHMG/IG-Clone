@@ -1,0 +1,27 @@
+mat-card {
+    width: 500px;
+}
+
+.card-comment {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.spinner-loader {
+    margin: auto;
+}
+
+.modal-comments {
+    min-width: 350px;
+}
+
+.wrapper-close-button {
+    justify-content: flex-end;
+    display: flex;
+}

@@ -1,0 +1,31 @@
+<mat-tab-group mat-align-tabs="center" animationDuration="2000ms" id="tab-group" dynamicHeight (selectedTabChange)="tabClick($event)">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">home</mat-icon>
+            Inicio
+        </ng-template>
+        <ng-template matTabContent>
+            <app-home-page></app-home-page>
+        </ng-template>
+
+    </mat-tab>
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">account_circle</mat-icon>
+            Mi Pefil
+        </ng-template>
+        <ng-template matTabContent>
+            <app-profile-page></app-profile-page>
+        </ng-template>
+    </mat-tab>
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">power_settings_new</mat-icon>
+            Cerrar Sesion
+        </ng-template>
+
+        Content 3
+    </mat-tab>
+</mat-tab-group>

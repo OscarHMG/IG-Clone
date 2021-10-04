@@ -1,0 +1,29 @@
+.wrapper-profile {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    text-align: center;
+}
+
+.uxg-avatar-hero-block {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.wrapper-post {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-loader {
+    display: inline-flex;
+}
