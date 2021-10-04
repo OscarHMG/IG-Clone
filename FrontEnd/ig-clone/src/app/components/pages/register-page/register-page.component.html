@@ -1,0 +1,83 @@
+<div id="login-wrapper">
+    <!-- <img id="logo" mat-card-image src="assets/logo_ig.png" alt="IG Logo"> -->
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" autocomplete="off">
+        <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+        <mat-card class="shipping-card mat-elevation-z3">
+            <mat-card-content>
+                <h1>Crea tu nueva cuenta</h1>
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input matInput placeholder="Nombre" formControlName="names">
+                            <mat-error *ngIf="registerForm.controls['names'].hasError('required')">
+                                El campo nombre es <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input matInput placeholder="Apellidos" formControlName="lastNames">
+                            <mat-error *ngIf="registerForm.controls['lastNames'].hasError('required')">
+                                El campo apellidos es <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input matInput placeholder="Correo electronico" formControlName="email">
+                            <mat-error *ngIf="registerForm.controls['email'].hasError('required')">
+                                El campo apellidos es <strong>requerido</strong>
+                            </mat-error>
+                            <mat-error *ngIf="registerForm.controls['email'].hasError('email')">
+                                El campo correo debe cumplir <strong>con un formato valido</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input matInput placeholder="Usuario" formControlName="userName">
+                            <mat-error *ngIf="registerForm.controls['userName'].hasError('required')">
+                                El campo usuario es <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input matInput placeholder="Contraseña" formControlName="password" matInput type="password">
+                            <mat-error *ngIf="!registerForm.controls['password'].valid && registerForm.controls['password'].touched">
+                                {{ getErrorPassword() }}
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input matInput placeholder="Confirmar Contraseña" formControlName="confirmPass" matInput type="password">
+                            <mat-error *ngIf="!registerForm.controls['confirmPass'].valid && registerForm.controls['confirmPass'].touched">
+                                Contraseñas <strong>deben coincidir</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" type="submit" [disabled]="loading"> Registrarse </button>
+
+            </mat-card-actions>
+            <a [routerLink]="'/login'"><small class="login-link">Tienes cuenta? Ingresa!</small></a>
+
+        </mat-card>
+    </form>
+</div>

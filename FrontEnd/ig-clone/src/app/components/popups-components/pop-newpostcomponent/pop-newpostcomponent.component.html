@@ -1,0 +1,19 @@
+<div>
+    <h1>Nuevo Post</h1>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off" class="full-width">
+        <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Nuevo comentario..</mat-label>
+            <textarea matInput #newPost maxlength="150" placeholder="Agrega un nuevo post.." formControlName="newPost"></textarea>
+            <mat-error *ngIf="form.controls['newPost'].hasError('required')">
+                Comentario es <strong>requerido</strong>
+            </mat-error>
+            <mat-hint align="start"><strong>Que estas pensando?</strong> </mat-hint>
+            <mat-hint align="end">{{newPost.value.length}} / 150</mat-hint>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" class="button-submitcomment" [disabled]="loading">
+            Nuevo Post
+        </button>
+    </form>
+</div>

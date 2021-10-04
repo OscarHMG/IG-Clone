@@ -8,21 +8,24 @@ from .models import *
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'username', 'email', 'password', 'first_name', 'last_name')
-        extra_kwargs = {'password': {'write_only': True, 'required': True}}
+        # fields = ('id','username', 'email', 'password', 'first_name', 'last_name')
+        # fields = ('id', 'username', 'password')
+        # fields = '__all__'
+        # read_only_fields = ('is_active', 'is_staff', 'id', 'last_login', 'is_superuser', 'date_joined', 'groups', 'user_permissions')
+        # extra_kwargs = {'password': {'write_only': True, 'required': True}}
+        fields = ('id', 'username', 'password', 'email', 'first_name', 'last_name')
+        write_only_fields = ('password',)
+        read_only_fields = ('id',)
 
-    def create(self, validated_data):
-        user = User.objects.create(
-            username=validated_data['username'],
-            email=validated_data['email']
-        )
-
-        user.set_password(validated_data['password'])
-        user.save()
-        Token.objects.create(user=user)
-        return user
+    #def create(self, request, *args, **kwargs):
+        #print('YIKES!')
+        #serializer = UserSerializer(data=request.data)
+        #serializer.is_valid(raise_exception=True)
+        #serializer.save()
+        #return Response(serializer.data)
 
     def post(self, request, *args, **kwargs):
+        print('XXX')
         serializer = self.get_serializer(data=request.data)
         print('LOL')
         if serializer.is_valid():
@@ -36,6 +39,7 @@ class UserSerializer(serializers.ModelSerializer):
 
             return response
 
+        print('NOPE')
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 

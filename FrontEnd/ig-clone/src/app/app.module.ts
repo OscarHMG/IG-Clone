@@ -26,6 +26,10 @@ import { PopupNewcommentComponent } from './components/popups-components/popup-n
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { PopNewpostcomponentComponent } from './components/popups-components/pop-newpostcomponent/pop-newpostcomponent.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +40,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ReactionComponentComponent,
     PopupCommentsComponent,
     PopupNewcommentComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    RegisterPageComponent,
+    PopNewpostcomponentComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +61,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatDividerModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatAutocompleteModule
   ],
   exports:[
     RouterModule

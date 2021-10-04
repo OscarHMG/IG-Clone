@@ -25,8 +25,20 @@ export class AuthenticationService {
         return token;
     }
 
-    getProfileInformation(){
-        return this.http.get<User>(`${environment.baseUrl}api/users/get_profile_info/`);
+    getProfileInformation(user: number){
+        //return this.http.get<User>(`${environment.baseUrl}api/users/get_profile_info/`);
+        if(user !== 0){
+            return this.http.get<User>(`${environment.baseUrl}api/profile/${user}/get_profile_infoV2/`);
+        }
+        else{
+            return this.http.get<User>(`${environment.baseUrl}api/users/get_profile_info/`);
+        }
+        
+    }
+
+
+    registerNewUser(user : User){
+        return this.http.post<any>(`${environment.baseUrl}api/register/`, user);
     }
 
     login(username:string, password:string) {

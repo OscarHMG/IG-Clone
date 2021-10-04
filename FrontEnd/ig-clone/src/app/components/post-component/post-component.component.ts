@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PopupCommentsComponent } from '../popups-components/popup-comments/popup-comments.component';
 import { PopupNewcommentComponent } from '../popups-components/popup-newcomment/popup-newcomment.component';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-post-component',
@@ -22,12 +23,17 @@ export class PostComponentComponent implements OnInit {
   numberComments! :number
   @Input()
   numberReactions! :number
-  constructor(public dialog: MatDialog) { }
+
+  isAuth! : boolean 
+  constructor(public dialog: MatDialog, private authService: AuthenticationService) { }
 
   ngOnInit(): void {
+    this.isAuth = this.authService.currentUserValue == null ? false : true;
   }
 
   openCommentsByPost(id: number) {
+
+    
     const dialogo1 = this.dialog.open(PopupCommentsComponent, {
       data: id
     });

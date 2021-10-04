@@ -8,6 +8,11 @@ routers = routers.DefaultRouter()
 routers.register('users', UserViewSet)
 routers.register('posts', PostViewSet)
 routers.register('comments', CommentViewSet)
+routers.register('register', RegisterViewSet)
+routers.register('allUsers', AllUsersViewSet)
+routers.register('profile', PerfilViewSet)
+routers.register('profileComments', CommentsNoAuthViewSet)
 urlpatterns = [
-    path('', include(routers.urls)),
+    path('', include(routers.urls))
+
 ]

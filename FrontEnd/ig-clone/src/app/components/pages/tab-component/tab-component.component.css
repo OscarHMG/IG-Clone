@@ -5,3 +5,11 @@
 #tab-group mat-tab-body {
     flex-grow: 1;
 }
+
+.mat-tab-body-content {
+    overflow: auto !important;
+}
+
+.mat-tab-body-wrapper {
+    overflow: auto !important;
+}

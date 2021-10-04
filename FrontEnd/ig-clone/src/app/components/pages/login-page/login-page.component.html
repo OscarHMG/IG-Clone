@@ -1,3 +1,12 @@
+<mat-form-field class="autocomplete">
+    <input type="text" placeholder="Buscar usuario" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)='getUser($event.option.value)'>
+        <mat-option *ngFor="let option of options" [value]="option">
+            {{option.username}}
+        </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+
 <div id="login-wrapper">
     <img id="logo" mat-card-image src="assets/logo_ig.png" alt="IG Logo">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
@@ -36,7 +45,7 @@
 
 
                 <!-- <mat-spinner></mat-spinner> -->
-                <button mat-raised-button color="primary" type="submit">
+                <button mat-raised-button color="primary" type="submit" [disabled]="loading">
             Iniciar Sesión
           </button>
             </mat-card-actions>

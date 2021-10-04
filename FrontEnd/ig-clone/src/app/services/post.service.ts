@@ -18,14 +18,26 @@ export class PostService {
     return this.http.get<Array<Post>>(`${environment.baseUrl}api/posts/`);
   }
 
-  getPostsByUser(){
-    return this.http.get<Array<Post>>(`${environment.baseUrl}api/posts/get_post_by_user/`);
+  getPostsByUser(user: number){
+    if(user !== 0){
+      return this.http.get<Array<Post>>(`${environment.baseUrl}api/profileComments/${user}/get_post_by_userV2/`);
+    }
+    else{
+      return this.http.get<Array<Post>>(`${environment.baseUrl}api/posts/get_post_by_user/`);
+
+    }
+
   }
 
   
 
   createNewComment(idPost: any, comment: string){
-    return this.http.post<any>(`${environment.baseUrl}api/posts/${idPost}/create_new_postV2/`, { comment_text: comment });
+    return this.http.post<any>(`${environment.baseUrl}api/posts/${idPost}/create_new_comments_in_post/`, { comment_text: comment });
+  }
+
+  createNewPost(post: string){
+    return this.http.post<any>(`${environment.baseUrl}api/posts/1/create_new_post/`, { description: post });
+
   }
 
 }

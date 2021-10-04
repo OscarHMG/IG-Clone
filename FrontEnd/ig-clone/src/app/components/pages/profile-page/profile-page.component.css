@@ -27,3 +27,9 @@
 .spinner-loader {
     display: inline-flex;
 }
+
+.create-post {
+    cursor: pointer;
+    color: blueviolet;
+    margin-left: 15px;
+}

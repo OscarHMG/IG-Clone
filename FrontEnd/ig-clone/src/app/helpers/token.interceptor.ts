@@ -13,7 +13,6 @@ export class TokenInterceptor implements HttpInterceptor {
         let token = this.authenticationService.currentUserValue;
         
         if (token) {
-            console.log('INTERCEPTOR TOKEN', token);
             request = request.clone({
                 setHeaders: { 
                     Authorization: `Token ${token}`,
@@ -22,8 +21,6 @@ export class TokenInterceptor implements HttpInterceptor {
                 withCredentials: true,
             });
         }
-
-        console.log(request);
         return next.handle(request);
     }
 }

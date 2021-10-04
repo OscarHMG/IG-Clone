@@ -7,7 +7,12 @@
             <span class="uxg-caption">{{profile.email}}</span>
         </div>
     </div>
-
+    <div *ngIf="!isAuth">
+        <a [routerLink]="'/login'"><small class="resetPassword">Regresar al login.!</small></a>
+    </div>
+    <div *ngIf="isAuth">
+        <div class="create-post" (click)="createNewPost()">Crear nueva publicacion</div>
+    </div>
     <h3 class="title"><strong>MIS PUBLICACIONES</strong></h3>
     <mat-spinner class="spinner-loader" *ngIf="loadingPosts" [diameter]="40"></mat-spinner>
     <div *ngIf="!loadingPosts">

@@ -26,13 +26,13 @@
         <p>{{postText}}</p>
     </mat-card-content>
     <mat-divider inset></mat-divider>
-    <div class="wrapper-actions">
+    <div class="wrapper-actions" *ngIf="isAuth">
         <div class="create-comment" (click)="createNewComment(id)">Comentar</div>
         <div class="comments" (click)="openCommentsByPost(id)">{{numberComments}} Comentarios</div>
         <div class="reacciones">{{numberReactions}} Reacciones</div>
 
     </div>
-    <div>
+    <div *ngIf="isAuth">
         <reaction [itemId]="id" showEmojis="true"></reaction>
     </div>
 

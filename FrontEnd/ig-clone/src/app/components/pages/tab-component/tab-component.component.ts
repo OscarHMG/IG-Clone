@@ -9,11 +9,12 @@ import { AuthenticationService } from '../../../services/authentication.service'
   styleUrls: ['./tab-component.component.css']
 })
 export class TabComponentComponent implements OnInit {
-
+  isAuth : boolean = false;
   constructor(private authService: AuthenticationService, private route: ActivatedRoute,
     private router: Router,private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+    this.isAuth = this.authService.currentUserValue === null ? false : true;
   }
 
 
